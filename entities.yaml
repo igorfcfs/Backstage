@@ -1,0 +1,217 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: superag-platform
+
+spec:
+  owner: guests
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rag-engine
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: judge-llm
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: template-service
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: metadata-processor
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: validation-pipeline
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: saga-manager
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: deployment-agent
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: github-sync
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: vector-worker
+
+spec:
+  type: worker
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: embedding-service
+
+spec:
+  type: service
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: generation-api
+
+spec:
+  type: openapi
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Generation API
+      version: 1.0.0
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: validation-api
+
+spec:
+  type: openapi
+  lifecycle: production
+  owner: guests
+  system: superag-platform
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Validation API
+      version: 1.0.0
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: pinecone-db
+
+spec:
+  type: database
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-main
+
+spec:
+  type: database
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-cache
+
+spec:
+  type: cache
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka-cluster
+
+spec:
+  type: messaging
+  owner: guests
+  system: superag-platform
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rabbitmq-broker
+
+spec:
+  type: messaging
+  owner: guests
+  system: superag-platform

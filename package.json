@@ -67,6 +67,7 @@
     "@backstage/plugin-search-backend": "^2.1.1",
     "@backstage/plugin-search-backend-module-catalog": "^0.3.14",
     "@backstage/plugin-search-backend-module-elasticsearch": "^1.8.2",
-    "@backstage/plugin-search-backend-module-techdocs": "^0.4.13"
+    "@backstage/plugin-search-backend-module-techdocs": "^0.4.13",
+    "dotenv": "^17.4.2"
   }
 }

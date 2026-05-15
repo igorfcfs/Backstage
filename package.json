@@ -62,5 +62,11 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "@backstage/plugin-search-backend": "^2.1.1",
+    "@backstage/plugin-search-backend-module-catalog": "^0.3.14",
+    "@backstage/plugin-search-backend-module-elasticsearch": "^1.8.2",
+    "@backstage/plugin-search-backend-module-techdocs": "^0.4.13"
+  }
 }

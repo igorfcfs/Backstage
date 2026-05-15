@@ -111,27 +111,42 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   
-  # providers:
-  #   github:
-  #     backstageGitHubCatalog:
-  #       organization: Nexus-Evolution-Tech
-  #       catalogPath: catalog-info.yaml
-  #       filters:
-  #         branch: main
-  #       schedule:
-  #         frequency: { minutes: 5 }
-  #         timeout: { minutes: 3 }
-
   providers:
     github:
-      providerId:
+      igorGithubProvider:
         organization: Nexus-Evolution-Tech
         catalogPath: catalog-info.yaml
         filters:
           branch: main
         schedule:
           frequency: { minutes: 5 }
-          timeout: { minutes: 3 }       
+          timeout: { minutes: 3 }
+      
+      eduGithubProvider:
+        organization: 'edulucca'
+        catalogPath: '/catalog-info.yaml'
+        filters:
+          branch: 'master'
+          repository: '.*'
+
+      lucasGithubProvider:
+        organization: lucaspalharesbarbosa
+        catalogPath: catalog-info.yaml
+        filters:
+          branch: main
+        schedule:
+          frequency: { minutes: 5 }
+          timeout: { minutes: 3 }
+
+      emanuelGithubProvider:
+        organization: 'emanueldeveloper82'
+        catalogPath: 'catalog-info.yaml'
+        filters:
+          repositoryVisible: 'all'
+        schedule:
+          frequency: { minutes: 1 }
+          timeout: { minutes: 3 }
+          initialDelay: { seconds: 15 }
 
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
